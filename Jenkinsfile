@@ -5,7 +5,7 @@ pipeline {
         stage('Deploy to Minikube') {
             steps {
                 kubernetesDeploy(
-                    kubeconfigId: 'myminikube-cred',
+                    kubeconfigId: 'myminikube-cred2',
                     configs: 'pod.yaml',
                     enableConfigSubstitution: true
                 )
