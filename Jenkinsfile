@@ -6,13 +6,8 @@ pipeline {
             steps {
                 // Checkout the code from the repository
                 git branch: 'main', url: 'https://github.com/ziyad-tarek1/minikube-jenkins-test.git'
-
             }
         }
-    }
-
-
-    stages {
         stage('Deploy to Minikube') {
             steps {
                 kubernetesDeploy(
