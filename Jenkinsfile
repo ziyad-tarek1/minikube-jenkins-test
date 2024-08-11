@@ -8,15 +8,7 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/ziyad-tarek1/minikube-jenkins-test.git'
             }
         }
-      /*  stage('Deploy to Minikube') {
-            steps {
-                kubernetesDeploy(
-                    kubeconfigId: 'myminikube-cred2',
-                    configs: 'pod.yaml',
-                    enableConfigSubstitution: true
-                )
-            }
-        }*/
+     
     stage('Deploy') {
             steps {
                 sh 'kubectl apply -f pod.yaml'
